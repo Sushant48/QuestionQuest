@@ -1,0 +1,14 @@
+{
+  "name": "questionquest",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "nodemon backend/index.js"
+  },
+  "author": "Sushant Singh",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "nodemon": "^3.1.9"
+  }
+}
