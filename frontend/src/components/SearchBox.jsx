@@ -26,7 +26,7 @@ const SearchBox = ({ onSearch }) => {
       />
 
       <Dropdown
-        options={["All Types", "MCQ", "ANAGRAM", "READ_ALONG", "CONTENT_ONLY"]}
+        options={["MCQ", "ANAGRAM", "READ_ALONG", "CONTENT_ONLY"]}
         placeholder="Select Type"
         onSelect={(selectedOption) => setType(selectedOption)} 
       />
