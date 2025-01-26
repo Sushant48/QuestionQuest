@@ -51,5 +51,19 @@ const searchQuestions = asyncHandler(async (req, res) => {
   });
   
   
+  const getQuestionById = asyncHandler(async (req, res) => {
+    const { id } = req.params;
 
-  export { searchQuestions, getAllQuestions};
+    try {
+      const question = await Data.findById(id);
+      if (!question) {
+        return res.status(404).json({ error: "Question not found" });
+      }
+  
+      res.status(200).json(question);
+    } catch (error) {
+      res.status(500).json({ error: "Failed to fetch question details" });
+    }
+  })
+
+  export {getQuestionById, searchQuestions, getAllQuestions};
